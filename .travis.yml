@@ -4,4 +4,7 @@ services:
 
 before_insall:
   - docker build -t msrdhan/docker-react -f Dockerfile.dev .
-  
+
+script:
+  - docker run msrdhan/docker-react npm run test -- --coverage
+
